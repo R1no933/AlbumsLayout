@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AlbumsViewController.swift
 //  AlbumsLayout
 //
 //  Created by Dmitriy Baskakov on 13.06.2022.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlbumsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Альбомы"
+        view.backgroundColor = UIColor.white
     }
-
-
 }
-
