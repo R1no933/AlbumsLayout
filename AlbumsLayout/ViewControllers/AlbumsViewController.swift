@@ -14,17 +14,22 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         
         collectionView.register(AlbumsCollectionViewCell.self,
-            forCellWithReuseIdentifier: AlbumsCollectionViewCell.identifire)
+                                forCellWithReuseIdentifier: AlbumsCollectionViewCell.identifire)
         collectionView.register(HeaderAlbumCell.self,
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: HeaderAlbumCell.identifire)
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: HeaderAlbumCell.identifire)
         
         collectionView.register(PeopleCollectionViewCell.self,
-            forCellWithReuseIdentifier: PeopleCollectionViewCell.identifire)
+                                forCellWithReuseIdentifier: PeopleCollectionViewCell.identifire)
         collectionView.register(HeaderPeopleCell.self,
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: HeaderPeopleCell.identifire)
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: HeaderPeopleCell.identifire)
         
+        collectionView.register(TypeCollectionViewCell.self,
+                                forCellWithReuseIdentifier: TypeCollectionViewCell.identifire)
+        collectionView.register(HeaderTypeCell.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: HeaderTypeCell.identifire)
         
         collectionView.dataSource = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +68,7 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - DataSource numberOfSection
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     //MARK: - DataSource numberOfItemsInSection
@@ -74,6 +79,8 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
             numberOfCell = SectionModel.albumsSection.count
         case 1:
             numberOfCell = SectionModel.peopleSection.count
+        case 2:
+            numberOfCell = SectionModel.typeSection.count
         default:
             break
         }
@@ -96,6 +103,12 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
                 for: indexPath) as! PeopleCollectionViewCell
             peopleCell.data = SectionModel.peopleSection[indexPath.row]
             return peopleCell
+        case 2:
+            let typeCell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: TypeCollectionViewCell.identifire,
+                for: indexPath) as! TypeCollectionViewCell
+            typeCell.data = SectionModel.typeSection[indexPath.row]
+            return typeCell
         default:
             return UICollectionViewCell()
         }
@@ -106,9 +119,9 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
         switch indexPath.section {
         case 0:
             let albumsHeader = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: UICollectionView.elementKindSectionHeader,
-                    withReuseIdentifier: HeaderAlbumCell.identifire,
-                    for: indexPath) as! HeaderAlbumCell
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: HeaderAlbumCell.identifire,
+                for: indexPath) as! HeaderAlbumCell
             return albumsHeader
         case 1:
             let peopleHeader = collectionView.dequeueReusableSupplementaryView(
@@ -116,6 +129,12 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
                 withReuseIdentifier: HeaderPeopleCell.identifire,
                 for: indexPath) as! HeaderPeopleCell
             return peopleHeader
+        case 2:
+            let typeHeader = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: HeaderTypeCell.identifire,
+                for: indexPath) as! HeaderTypeCell
+            return typeHeader
         default:
             return UICollectionReusableView()
         }
@@ -132,13 +151,14 @@ extension AlbumsViewController {
             switch sectionNumber {
             case 0: return self.layoutAlbums()
             case 1: return self.layoutPeople()
+            case 2: return self.layoutType()
             default: return self.layoutAlbums()
             }
         }
     }
     
     //MARK: - Layout Albums
-    func layoutAlbums() -> NSCollectionLayoutSection {
+    private func layoutAlbums() -> NSCollectionLayoutSection {
        
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -181,7 +201,8 @@ extension AlbumsViewController {
         return section
     }
     
-    func layoutPeople() -> NSCollectionLayoutSection {
+    //MARK: - Loyout People and Place secction
+    private func layoutPeople() -> NSCollectionLayoutSection {
        
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -216,6 +237,41 @@ extension AlbumsViewController {
         section.boundarySupplementaryItems = [sectionHeader]
         section.contentInsets = .init(
             top: 10,
+            leading: 0,
+            bottom: 5,
+            trailing: 0)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        return section
+    }
+    
+    //MARK: - Layout Type of media section
+    private func layoutType() -> NSCollectionLayoutSection {
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(50))
+        
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(50))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(480))
+        
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [sectionHeader]
+        section.contentInsets = .init(
+            top: 7,
             leading: 0,
             bottom: 5,
             trailing: 0)
