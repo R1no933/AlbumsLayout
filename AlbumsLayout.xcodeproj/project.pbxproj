@@ -78,14 +78,13 @@
 		B738C7FE28579E8E008D2CB5 /* AlbumsLayout */ = {
 			isa = PBXGroup;
 			children = (
+				B738C838285B7179008D2CB5 /* Model */,
 				B738C8262857ADC1008D2CB5 /* Cells */,
 				B738C8202857A9DC008D2CB5 /* ViewControllers */,
 				B738C7FF28579E8E008D2CB5 /* AppDelegate.swift */,
 				B738C80828579E91008D2CB5 /* Assets.xcassets */,
 				B738C80A28579E91008D2CB5 /* LaunchScreen.storyboard */,
 				B738C80D28579E91008D2CB5 /* Info.plist */,
-				B738C81428579F78008D2CB5 /* TabBarController.swift */,
-				B738C8212857AA88008D2CB5 /* Model.swift */,
 			);
 			path = AlbumsLayout;
 			sourceTree = "<group>";
@@ -93,6 +92,7 @@
 		B738C8202857A9DC008D2CB5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B738C81428579F78008D2CB5 /* TabBarController.swift */,
 				B738C81E2857A083008D2CB5 /* MediatekaViewController.swift */,
 				B738C81A2857A05D008D2CB5 /* AlbumsViewController.swift */,
 				B738C81C2857A073008D2CB5 /* ForYouViewController.swift */,
@@ -122,6 +122,14 @@
 				B738C836285B6DC4008D2CB5 /* HeaderOtherCell.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		B738C838285B7179008D2CB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B738C8212857AA88008D2CB5 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
