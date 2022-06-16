@@ -48,4 +48,23 @@ extension SectionModel {
             signature: "Mem's",
             count: "666")
     ]
+    
+    static let peopleSection = [
+        SectionModel(
+            image: UIImage(named: "img4"),
+            signature: "Cat's",
+            count: "666"),
+        SectionModel(
+            image: UIImage(named: "img3"),
+            signature: "Mem's",
+            count: "28"),
+        SectionModel(
+            image: UIImage(named: "img1"),
+            signature: "Board's",
+            count: "1384"),
+        SectionModel(
+            image: UIImage(named: "img2"),
+            signature: "Cat's rider",
+            count: "333")
+    ]
 }

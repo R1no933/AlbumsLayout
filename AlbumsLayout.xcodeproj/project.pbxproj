@@ -18,6 +18,10 @@
 		B738C8222857AA88008D2CB5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8212857AA88008D2CB5 /* Model.swift */; };
 		B738C8252857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8242857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift */; };
 		B738C8282857B51F008D2CB5 /* HeaderAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */; };
+		B738C82C285B2963008D2CB5 /* HeaderPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C82B285B2963008D2CB5 /* HeaderPeopleCell.swift */; };
+		B738C82F285B29EC008D2CB5 /* PeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C82E285B29EC008D2CB5 /* PeopleCollectionViewCell.swift */; };
+		B738C831285B33BE008D2CB5 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C830285B33BE008D2CB5 /* TypeCollectionViewCell.swift */; };
+		B738C833285B33D7008D2CB5 /* HeaderTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C832285B33D7008D2CB5 /* HeaderTypeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		B738C8212857AA88008D2CB5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B738C8242857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAlbumCell.swift; sourceTree = "<group>"; };
+		B738C82B285B2963008D2CB5 /* HeaderPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPeopleCell.swift; sourceTree = "<group>"; };
+		B738C82E285B29EC008D2CB5 /* PeopleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewCell.swift; sourceTree = "<group>"; };
+		B738C830285B33BE008D2CB5 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B738C832285B33D7008D2CB5 /* HeaderTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTypeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +100,22 @@
 		B738C8262857ADC1008D2CB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B738C82D285B29C1008D2CB5 /* Header */,
 				B738C8242857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift */,
-				B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */,
+				B738C82E285B29EC008D2CB5 /* PeopleCollectionViewCell.swift */,
+				B738C830285B33BE008D2CB5 /* TypeCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B738C82D285B29C1008D2CB5 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B738C82B285B2963008D2CB5 /* HeaderPeopleCell.swift */,
+				B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */,
+				B738C832285B33D7008D2CB5 /* HeaderTypeCell.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,14 +189,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B738C8222857AA88008D2CB5 /* Model.swift in Sources */,
+				B738C82C285B2963008D2CB5 /* HeaderPeopleCell.swift in Sources */,
 				B738C81528579F78008D2CB5 /* TabBarController.swift in Sources */,
 				B738C81F2857A083008D2CB5 /* MediatekaViewController.swift in Sources */,
 				B738C81D2857A073008D2CB5 /* ForYouViewController.swift in Sources */,
 				B738C8252857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift in Sources */,
 				B738C8192857A04C008D2CB5 /* SearchViewController.swift in Sources */,
 				B738C80028579E8E008D2CB5 /* AppDelegate.swift in Sources */,
+				B738C831285B33BE008D2CB5 /* TypeCollectionViewCell.swift in Sources */,
 				B738C81B2857A05D008D2CB5 /* AlbumsViewController.swift in Sources */,
 				B738C8282857B51F008D2CB5 /* HeaderAlbumCell.swift in Sources */,
+				B738C833285B33D7008D2CB5 /* HeaderTypeCell.swift in Sources */,
+				B738C82F285B29EC008D2CB5 /* PeopleCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

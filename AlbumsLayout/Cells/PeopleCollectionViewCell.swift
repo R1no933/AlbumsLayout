@@ -1,14 +1,15 @@
 //
-//  AlbumsCollectionViewCell.swift
+//  PeopleCollectionViewCell.swift
 //  AlbumsLayout
 //
-//  Created by Dmitriy Baskakov on 13.06.2022.
+//  Created by Dmitriy Baskakov on 16.06.2022.
 //
 
+import Foundation
 import UIKit
 
-class AlbumsCollectionViewCell: UICollectionViewCell {
-    static let identifire = "AlbumsCell"
+class PeopleCollectionViewCell: UICollectionViewCell {
+    static let identifire = "PeopleCollectionViewCell"
     
     //MARK: - UI's elemet's
     var data: SectionModel? {
@@ -25,7 +26,7 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AlbumsMetrics.signatureLabelFont
+        label.font = PeopleMetrics.signatureLabelFont
         label.textAlignment = .left
         label.textColor = UIColor.black
         
@@ -36,7 +37,7 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AlbumsMetrics.signatureLabelFont
+        label.font = PeopleMetrics.signatureLabelFont
         label.textAlignment = .left
         label.textColor = UIColor.systemGray3
         
@@ -72,7 +73,9 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Setup Hierarchy
     func setupHierarchy() {
-        [albumImage, signatureLabel, countLabel].forEach({ contentView.addSubview($0) })
+        contentView.addSubview(albumImage)
+        contentView.addSubview(signatureLabel)
+        contentView.addSubview(countLabel)
     }
     
     //MARK: - SetupLayout's
@@ -80,29 +83,29 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             albumImage.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: AlbumsMetrics.albumsImageTop),
+                constant: PeopleMetrics.albumsImageTop),
             albumImage.leadingAnchor.constraint(
                 equalTo: self.contentView.leadingAnchor,
-                constant: AlbumsMetrics.albumsImageLeading),
+                constant: PeopleMetrics.albumsImageLeading),
             albumImage.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
-                constant: AlbumsMetrics.albumsImageTrailing),
+                constant: PeopleMetrics.albumsImageTrailing),
             albumImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
             
             signatureLabel.topAnchor.constraint(
                 equalTo: albumImage.bottomAnchor,
-                constant: AlbumsMetrics.signatureLabelTop),
+                constant: PeopleMetrics.signatureLabelTop),
             signatureLabel.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
-                constant: AlbumsMetrics.signatureLabelLeading),
+                constant: PeopleMetrics.signatureLabelLeading),
             signatureLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             
             countLabel.topAnchor.constraint(
                 equalTo: signatureLabel.bottomAnchor,
-                constant: AlbumsMetrics.countLabelTop),
+                constant: PeopleMetrics.countLabelTop),
             countLabel.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
-                constant: AlbumsMetrics.countLabelLeading),
+                constant: PeopleMetrics.countLabelLeading),
             countLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor)
         ])
     }
@@ -110,7 +113,7 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Metric's constant's
     
-    private struct AlbumsMetrics {
+    private struct PeopleMetrics {
         static let signatureLabelFont = UIFont(name: "system", size: 18)
         
         static let albumsImageTop: CGFloat = 5
