@@ -119,6 +119,22 @@ extension SectionModel {
             rightImage: UIImage(systemName: "chevron.right"))
     ]
     
-    static let 
+    static let otherSection = [
+        SectionModel(
+            image: UIImage(systemName: "square.and.arrow.down"),
+            signature: "Imported",
+            count: "122",
+            rightImage: UIImage(systemName: "chevron.right")),
+        SectionModel(
+            image: UIImage(systemName: "eye.slash"),
+            signature: "Hidden",
+            count: "0",
+            rightImage: UIImage(systemName: "chevron.right")),
+        SectionModel(
+            image: UIImage(systemName: "trash"),
+            signature: "Recently deleted",
+            count: "1",
+            rightImage: UIImage(systemName: "chevron.right")),
+    ]
 }
 

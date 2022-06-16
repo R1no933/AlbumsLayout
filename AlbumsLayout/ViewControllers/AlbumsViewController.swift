@@ -31,6 +31,12 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: HeaderTypeCell.identifire)
         
+        collectionView.register(OtherCollectionViewCell.self,
+                                forCellWithReuseIdentifier: OtherCollectionViewCell.identifire)
+        collectionView.register(HeaderOtherCell.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: HeaderOtherCell.identifire)
+        
         collectionView.dataSource = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = UIColor.white
@@ -68,7 +74,7 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
     
     //MARK: - DataSource numberOfSection
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     //MARK: - DataSource numberOfItemsInSection
@@ -81,6 +87,8 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
             numberOfCell = SectionModel.peopleSection.count
         case 2:
             numberOfCell = SectionModel.typeSection.count
+        case 3:
+            numberOfCell = SectionModel.otherSection.count
         default:
             break
         }
@@ -109,6 +117,12 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
                 for: indexPath) as! TypeCollectionViewCell
             typeCell.data = SectionModel.typeSection[indexPath.row]
             return typeCell
+        case 3:
+            let otherCell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: OtherCollectionViewCell.identifire,
+                for: indexPath) as! OtherCollectionViewCell
+            otherCell.data = SectionModel.otherSection[indexPath.row]
+            return otherCell
         default:
             return UICollectionViewCell()
         }
@@ -135,6 +149,12 @@ class AlbumsViewController: UIViewController, UICollectionViewDataSource {
                 withReuseIdentifier: HeaderTypeCell.identifire,
                 for: indexPath) as! HeaderTypeCell
             return typeHeader
+        case 3:
+            let otherHeader = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: HeaderOtherCell.identifire,
+                for: indexPath) as! HeaderOtherCell
+            return otherHeader
         default:
             return UICollectionReusableView()
         }
@@ -152,6 +172,7 @@ extension AlbumsViewController {
             case 0: return self.layoutAlbums()
             case 1: return self.layoutPeople()
             case 2: return self.layoutType()
+            case 3: return self.layoutOther()
             default: return self.layoutAlbums()
             }
         }
@@ -264,7 +285,7 @@ extension AlbumsViewController {
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(480))
+            heightDimension: .absolute(350))
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         
@@ -280,6 +301,40 @@ extension AlbumsViewController {
         return section
     }
     
+    //MARK: - Layout Other section
+    private func layoutOther() -> NSCollectionLayoutSection {
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(50))
+        
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(50))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .absolute(150))
+        
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [sectionHeader]
+        section.contentInsets = .init(
+            top: 7,
+            leading: 0,
+            bottom: 5,
+            trailing: 0)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        return section
+    }
     
     
     //MARK: - Metric's constants
