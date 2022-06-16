@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		B738C80028579E8E008D2CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C7FF28579E8E008D2CB5 /* AppDelegate.swift */; };
-		B738C80228579E8E008D2CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C80128579E8E008D2CB5 /* SceneDelegate.swift */; };
-		B738C80428579E8E008D2CB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C80328579E8E008D2CB5 /* ViewController.swift */; };
-		B738C80728579E8E008D2CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B738C80528579E8E008D2CB5 /* Main.storyboard */; };
 		B738C80928579E91008D2CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B738C80828579E91008D2CB5 /* Assets.xcassets */; };
 		B738C80C28579E91008D2CB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B738C80A28579E91008D2CB5 /* LaunchScreen.storyboard */; };
+		B738C81528579F78008D2CB5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C81428579F78008D2CB5 /* TabBarController.swift */; };
+		B738C8192857A04C008D2CB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8182857A04C008D2CB5 /* SearchViewController.swift */; };
+		B738C81B2857A05D008D2CB5 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C81A2857A05D008D2CB5 /* AlbumsViewController.swift */; };
+		B738C81D2857A073008D2CB5 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C81C2857A073008D2CB5 /* ForYouViewController.swift */; };
+		B738C81F2857A083008D2CB5 /* MediatekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C81E2857A083008D2CB5 /* MediatekaViewController.swift */; };
+		B738C8222857AA88008D2CB5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8212857AA88008D2CB5 /* Model.swift */; };
+		B738C8252857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8242857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift */; };
+		B738C8282857B51F008D2CB5 /* HeaderAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */; };
+		B738C82C285B2963008D2CB5 /* HeaderPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C82B285B2963008D2CB5 /* HeaderPeopleCell.swift */; };
+		B738C82F285B29EC008D2CB5 /* PeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C82E285B29EC008D2CB5 /* PeopleCollectionViewCell.swift */; };
+		B738C831285B33BE008D2CB5 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C830285B33BE008D2CB5 /* TypeCollectionViewCell.swift */; };
+		B738C833285B33D7008D2CB5 /* HeaderTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C832285B33D7008D2CB5 /* HeaderTypeCell.swift */; };
+		B738C835285B6D9C008D2CB5 /* OtherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C834285B6D9C008D2CB5 /* OtherCollectionViewCell.swift */; };
+		B738C837285B6DC4008D2CB5 /* HeaderOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B738C836285B6DC4008D2CB5 /* HeaderOtherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B738C7FC28579E8E008D2CB5 /* AlbumsLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumsLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B738C7FF28579E8E008D2CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B738C80128579E8E008D2CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B738C80328579E8E008D2CB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B738C80628579E8E008D2CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B738C80828579E91008D2CB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B738C80B28579E91008D2CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B738C80D28579E91008D2CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B738C81428579F78008D2CB5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B738C8182857A04C008D2CB5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B738C81A2857A05D008D2CB5 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		B738C81C2857A073008D2CB5 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		B738C81E2857A083008D2CB5 /* MediatekaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatekaViewController.swift; sourceTree = "<group>"; };
+		B738C8212857AA88008D2CB5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B738C8242857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAlbumCell.swift; sourceTree = "<group>"; };
+		B738C82B285B2963008D2CB5 /* HeaderPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPeopleCell.swift; sourceTree = "<group>"; };
+		B738C82E285B29EC008D2CB5 /* PeopleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewCell.swift; sourceTree = "<group>"; };
+		B738C830285B33BE008D2CB5 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B738C832285B33D7008D2CB5 /* HeaderTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTypeCell.swift; sourceTree = "<group>"; };
+		B738C834285B6D9C008D2CB5 /* OtherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCollectionViewCell.swift; sourceTree = "<group>"; };
+		B738C836285B6DC4008D2CB5 /* HeaderOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOtherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,58 @@
 		B738C7FE28579E8E008D2CB5 /* AlbumsLayout */ = {
 			isa = PBXGroup;
 			children = (
+				B738C838285B7179008D2CB5 /* Model */,
+				B738C8262857ADC1008D2CB5 /* Cells */,
+				B738C8202857A9DC008D2CB5 /* ViewControllers */,
 				B738C7FF28579E8E008D2CB5 /* AppDelegate.swift */,
-				B738C80128579E8E008D2CB5 /* SceneDelegate.swift */,
-				B738C80328579E8E008D2CB5 /* ViewController.swift */,
-				B738C80528579E8E008D2CB5 /* Main.storyboard */,
 				B738C80828579E91008D2CB5 /* Assets.xcassets */,
 				B738C80A28579E91008D2CB5 /* LaunchScreen.storyboard */,
 				B738C80D28579E91008D2CB5 /* Info.plist */,
 			);
 			path = AlbumsLayout;
+			sourceTree = "<group>";
+		};
+		B738C8202857A9DC008D2CB5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B738C81428579F78008D2CB5 /* TabBarController.swift */,
+				B738C81E2857A083008D2CB5 /* MediatekaViewController.swift */,
+				B738C81A2857A05D008D2CB5 /* AlbumsViewController.swift */,
+				B738C81C2857A073008D2CB5 /* ForYouViewController.swift */,
+				B738C8182857A04C008D2CB5 /* SearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B738C8262857ADC1008D2CB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B738C82D285B29C1008D2CB5 /* Header */,
+				B738C8242857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift */,
+				B738C82E285B29EC008D2CB5 /* PeopleCollectionViewCell.swift */,
+				B738C830285B33BE008D2CB5 /* TypeCollectionViewCell.swift */,
+				B738C834285B6D9C008D2CB5 /* OtherCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B738C82D285B29C1008D2CB5 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				B738C82B285B2963008D2CB5 /* HeaderPeopleCell.swift */,
+				B738C8272857B51F008D2CB5 /* HeaderAlbumCell.swift */,
+				B738C832285B33D7008D2CB5 /* HeaderTypeCell.swift */,
+				B738C836285B6DC4008D2CB5 /* HeaderOtherCell.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		B738C838285B7179008D2CB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B738C8212857AA88008D2CB5 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +192,6 @@
 			files = (
 				B738C80C28579E91008D2CB5 /* LaunchScreen.storyboard in Resources */,
 				B738C80928579E91008D2CB5 /* Assets.xcassets in Resources */,
-				B738C80728579E8E008D2CB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +202,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B738C80428579E8E008D2CB5 /* ViewController.swift in Sources */,
+				B738C8222857AA88008D2CB5 /* Model.swift in Sources */,
+				B738C835285B6D9C008D2CB5 /* OtherCollectionViewCell.swift in Sources */,
+				B738C837285B6DC4008D2CB5 /* HeaderOtherCell.swift in Sources */,
+				B738C82C285B2963008D2CB5 /* HeaderPeopleCell.swift in Sources */,
+				B738C81528579F78008D2CB5 /* TabBarController.swift in Sources */,
+				B738C81F2857A083008D2CB5 /* MediatekaViewController.swift in Sources */,
+				B738C81D2857A073008D2CB5 /* ForYouViewController.swift in Sources */,
+				B738C8252857ADB3008D2CB5 /* AlbumsCollectionViewCell.swift in Sources */,
+				B738C8192857A04C008D2CB5 /* SearchViewController.swift in Sources */,
 				B738C80028579E8E008D2CB5 /* AppDelegate.swift in Sources */,
-				B738C80228579E8E008D2CB5 /* SceneDelegate.swift in Sources */,
+				B738C831285B33BE008D2CB5 /* TypeCollectionViewCell.swift in Sources */,
+				B738C81B2857A05D008D2CB5 /* AlbumsViewController.swift in Sources */,
+				B738C8282857B51F008D2CB5 /* HeaderAlbumCell.swift in Sources */,
+				B738C833285B33D7008D2CB5 /* HeaderTypeCell.swift in Sources */,
+				B738C82F285B29EC008D2CB5 /* PeopleCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B738C80528579E8E008D2CB5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B738C80628579E8E008D2CB5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B738C80A28579E91008D2CB5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +361,6 @@
 				INFOPLIST_FILE = AlbumsLayout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +387,6 @@
 				INFOPLIST_FILE = AlbumsLayout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
